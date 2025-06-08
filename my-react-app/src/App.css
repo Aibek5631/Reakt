@@ -138,8 +138,8 @@
 } */ 
 
 
-/* Общий стиль */
-body {
+/* To-Do-list */
+/* body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -279,4 +279,266 @@ body {
     background-color: #ffcc80;
     transform: scale(1.05);
 }
+ */
 
+
+ /*Move App*/
+ /* Основные стили приложения */
+/* .movie-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.movie-app h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+/* Стили формы */
+/* .movie-app form {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.movie-app label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.movie-app input[type="text"],
+.movie-app textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.movie-app input[type="text"]:focus,
+.movie-app textarea:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.movie-app textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.movie-app button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.movie-app button:hover {
+  background-color: #218838;
+}
+
+.preview {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.preview h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preview h3 {
+  color: #2c3e50;
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+}
+
+.preview p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.saved-movies {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.saved-movies h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.saved-movies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.saved-movies li {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.saved-movies li:last-child {
+  border-bottom: none;
+}
+
+.saved-movies li h3 {
+  color: #2c3e50;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.saved-movies li img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.saved-movies li p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.saved-movies p.empty-message {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .movie-app {
+    padding: 15px;
+  }
+  
+  .movie-app form,
+  .preview,
+  .saved-movies {
+    padding: 15px;
+  }
+} */
+ 
+
+ .app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.input-name,
+.input-grade,
+.input-comment {
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input-comment {
+  resize: vertical;
+  height: 60px;
+}
+
+.submit-button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.feedback-list {
+  margin-top: 20px;
+}
+
+.feedback-item {
+  background-color: #fff;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.feedback-item p {
+  margin: 5px 0;
+}

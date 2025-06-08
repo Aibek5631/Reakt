@@ -148,87 +148,87 @@
 
 // export default LiveInput;
 
+//To-Do-List
+// import React, { useState } from "react";
+// import "./App.css";
 
-import React, { useState } from "react";
-import "./App.css";
+// function App() {
+//     const [tasks, setTasks] = useState([]);
+//     const [input, setInput] = useState('');
+//     const [filter, setFilter] = useState('all');
 
-function App() {
-    const [tasks, setTasks] = useState([]);
-    const [input, setInput] = useState('');
-    const [filter, setFilter] = useState('all');
+//     const handleAddTasks = () => {
+//         if (input.trim() === '') return;
+//         setTasks([...tasks, { text: input, completed: false }]);
+//         setInput('');
+//     };
 
-    const handleAddTasks = () => {
-        if (input.trim() === '') return;
-        setTasks([...tasks, { text: input, completed: false }]);
-        setInput('');
-    };
+//     const handleDeleteTask = (index) => {
+//         const updatedTasks = tasks.filter((_, i) => i !== index);
+//         setTasks(updatedTasks);
+//     };
 
-    const handleDeleteTask = (index) => {
-        const updatedTasks = tasks.filter((_, i) => i !== index);
-        setTasks(updatedTasks);
-    };
+//     const toggleTaskStatus = (index) => {
+//         const updatedTasks = [...tasks];
+//         updatedTasks[index].completed = !updatedTasks[index].completed;
+//         setTasks(updatedTasks);
+//     };
 
-    const toggleTaskStatus = (index) => {
-        const updatedTasks = [...tasks];
-        updatedTasks[index].completed = !updatedTasks[index].completed;
-        setTasks(updatedTasks);
-    };
+//     const filteredTasks = tasks.filter(task => {
+//         if (filter === 'complete') return task.completed;
+//         if (filter === 'incomplete') return !task.completed;
+//         return true;
+//     });
 
-    const filteredTasks = tasks.filter(task => {
-        if (filter === 'complete') return task.completed;
-        if (filter === 'incomplete') return !task.completed;
-        return true;
-    });
+//     return (
+//         <div className="app">
+//             <h2 className="title">To-Do List</h2>
 
-    return (
-        <div className="app">
-            <h2 className="title">To-Do List</h2>
+//             <div className="input-container">
+//                 <input
+//                     type="text"
+//                     value={input}
+//                     placeholder="New task"
+//                     onChange={(e) => setInput(e.target.value)}
+//                     className="input"
+//                 />
+//                 <button onClick={handleAddTasks} className="add-button">Add</button>
+//             </div>
 
-            <div className="input-container">
-                <input
-                    type="text"
-                    value={input}
-                    placeholder="New task"
-                    onChange={(e) => setInput(e.target.value)}
-                    className="input"
-                />
-                <button onClick={handleAddTasks} className="add-button">Add</button>
-            </div>
+//             <div className="filter-box">
+//                 <button onClick={() => setFilter('all')}>All</button>
+//                 <button onClick={() => setFilter('complete')}>Complete</button>
+//                 <button onClick={() => setFilter('incomplete')}>Incomplete</button>
+//             </div>
 
-            <div className="filter-box">
-                <button onClick={() => setFilter('all')}>All</button>
-                <button onClick={() => setFilter('complete')}>Complete</button>
-                <button onClick={() => setFilter('incomplete')}>Incomplete</button>
-            </div>
+//             <ul className="task-list">
+//                 {filteredTasks.map((task, index) => (
+//                     <li key={index} className="task-item">
+//                         <div>
+//                             {task.text}
+//                         </div>
+//                         <div className="btn-box">
+//                             <button
+//                                 onClick={() => toggleTaskStatus(index)}
+//                                 className="status-button"
+//                             >
+//                                 {task.completed ? "Выполнено" : "Не выполнена"}
+//                             </button>
+//                             <button
+//                                 onClick={() => handleDeleteTask(index)}
+//                                 className="delete-button"
+//                             >
+//                                 ✖
+//                             </button>
+//                         </div>
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     );
+// }
 
-            <ul className="task-list">
-                {filteredTasks.map((task, index) => (
-                    <li key={index} className="task-item">
-                        <div>
-                            {task.text}
-                        </div>
-                        <div className="btn-box">
-                            <button
-                                onClick={() => toggleTaskStatus(index)}
-                                className="status-button"
-                            >
-                                {task.completed ? "Выполнено" : "Не выполнена"}
-                            </button>
-                            <button
-                                onClick={() => handleDeleteTask(index)}
-                                className="delete-button"
-                            >
-                                ✖
-                            </button>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-}
-
-export default App;
+// export default App;
 
 
 // import React, { useState } from 'react';
@@ -270,3 +270,196 @@ export default App;
 // }
 
 // export default App
+
+// import React, { useState } from 'react';
+// import './App.css'
+
+// function MovieApp() {
+//   const [movieData, setMovieData] = useState({
+//     title: '',
+//     poster: '',
+//     description: ''
+//   });
+
+//   const [savedMovies, setSavedMovies] = useState([]);
+
+//   const handleInputChange = (e) => {
+//     const { name, value } = e.target;
+//     setMovieData({
+//       ...movieData,
+//       [name]: value
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+    
+//     // Проверяем, заполнено ли хотя бы название
+//     if (!movieData.title.trim()) {
+//       alert('Пожалуйста, введите название фильма');
+//       return;
+//     }
+    
+//     // Добавляем фильм в список сохраненных
+//     setSavedMovies([...savedMovies, movieData]);
+    
+//     // Очищаем форму
+//     setMovieData({
+//       title: '',
+//       poster: '',
+//       description: ''
+//     });
+    
+//     console.log('Фильм сохранен:', movieData);
+//   };
+
+//   return (
+//     <div className="movie-app">
+//       <h1>Movie Information</h1>
+//       <form onSubmit={handleSubmit}>
+//         <div>
+//           <label htmlFor="title">Название фильма:</label>
+//           <input
+//             type="text"
+//             id="title"
+//             name="title"
+//             value={movieData.title}
+//             onChange={handleInputChange}
+//             placeholder="Введите название фильма"
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="poster">Ссылка на постер:</label>
+//           <input
+//             type="text"
+//             id="poster"
+//             name="poster"
+//             value={movieData.poster}
+//             onChange={handleInputChange}
+//             placeholder="Введите URL постера"
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="description">Описание:</label>
+//           <textarea
+//             id="description"
+//             name="description"
+//             value={movieData.description}
+//             onChange={handleInputChange}
+//             placeholder="Введите описание фильма"
+//           />
+//         </div>
+
+//         <button type="submit">
+//           Сохранить
+//         </button>
+//       </form>
+
+//       <div className="preview">
+//         <h2>Предпросмотр:</h2>
+//         {movieData.poster && (
+//           <img 
+//             src={movieData.poster} 
+//             alt={movieData.title || "Movie poster"} 
+//           />
+//         )}
+//         <h3>{movieData.title || "Название фильма"}</h3>
+//         <p>{movieData.description || "Описание фильма появится здесь"}</p>
+//       </div>
+
+//       <div className="saved-movies">
+//         <h2>Сохраненные фильмы:</h2>
+//         {savedMovies.length === 0 ? (
+//           <p>Нет сохраненных фильмов</p>
+//         ) : (
+//           <ul>
+//             {savedMovies.map((movie, index) => (
+//               <li key={index}>
+//                 <h3>{movie.title}</h3>
+//                 {movie.poster && <img src={movie.poster} alt={movie.title} />}
+//                 <p>{movie.description}</p>
+//               </li>
+//             ))}
+//           </ul>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default MovieApp;
+
+
+import React, { useState } from 'react';
+import "./App.css";
+
+const App = () => {
+  const [name, setName] = useState('');
+  const [grade, setGrade] = useState(0);
+  const [comment, setComment] = useState('');
+  const [feedbacks, setFeedbacks] = useState([]);
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newFeedback = { name, grade, comment };
+    setFeedbacks([...feedbacks, newFeedback]);
+    setName('');
+    setGrade('');
+    setComment('');
+  };
+
+  return (
+    <div className="app-container">
+      <h1 className="title">Student Feedback App</h1>
+      <form onSubmit={handleSubmit} className="feedback-form">
+
+        <label className="form-label">Имя:</label>
+        <input
+          type="text"
+          placeholder='Напишите Имя'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="input-name"
+        />
+        
+        <label className="form-label">Оценка (1–5):</label>
+        <input
+          type="number"
+          min="1"
+          max="5"
+          value={grade}
+          onChange={(e) => setGrade(Number(e.target.value))}
+          className="input-grade"
+        />
+
+        <label className="form-label">Отзыв:</label>
+        <textarea
+          placeholder='Отзыв'
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          className="input-comment"
+        ></textarea>
+
+        <button type="submit" className="submit-button">Добавить</button>
+      </form>
+
+      <h2 className="subtitle">ОТЗЫВЫ</h2>
+      <div className="feedback-list">
+        {feedbacks.map((fb, index) => (
+          <div key={index} className="feedback-item">
+            <p><strong>Имя:</strong> {fb.name}</p>
+            <p><strong>Оценка:</strong> {fb.grade}</p>
+            <p><strong>Отзыв:</strong> {fb.comment}</p>
+            <hr />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
